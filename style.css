@@ -98,3 +98,70 @@ section { padding: 80px 0; }
     .hero-text h1 { font-size: 2rem; }
     h3 { font-size: 1.8rem; }
 }
+
+/* --- Community & Volunteering Section --- */
+.volunteering-section {
+    background-color: var(--background-color);
+}
+.volunteer-project {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--section-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 35px 40px;
+    text-align: center;
+}
+.volunteer-project h4 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 0.2rem;
+}
+.volunteer-role {
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+.volunteer-description {
+    color: var(--primary-text);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+.volunteer-contributions {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+.volunteer-contributions li {
+    color: var(--secondary-text);
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0.8rem;
+}
+.volunteer-contributions li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+.github-button {
+    display: inline-block;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+.github-button:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+.github-button i {
+    margin-right: 8px;
+}
