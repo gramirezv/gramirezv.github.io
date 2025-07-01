@@ -1,0 +1,100 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-text: #2c3e50;
+    --secondary-text: #555;
+    --background-color: #f8f9fa;
+    --section-background: #ffffff;
+    --accent-color: #FF6600;
+    --border-color: #e0e0e0;
+    --header-font: 'Montserrat', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body-font); line-height: 1.6; background-color: var(--background-color); color: var(--primary-text); }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3, h4, h5 { font-family: var(--header-font); line-height: 1.3; margin-bottom: 1rem; }
+h3 { text-align: center; font-size: 2rem; margin-bottom: 3rem; position: relative; color: var(--primary-text); }
+h3::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background-color: var(--accent-color); }
+a { color: var(--accent-color); text-decoration: none; transition: color 0.3s ease; }
+a:hover { color: #cc5200; }
+section { padding: 80px 0; }
+
+/* --- Header & Navigation --- */
+.main-header { background: var(--section-background); padding: 1rem 0; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000; }
+.main-header .container { display: flex; justify-content: flex-end; align-items: center; } /* Changed to flex-end */
+.cta-button { font-family: var(--header-font); background-color: var(--accent-color); color: white; padding: 10px 20px; border-radius: 5px; font-size: 0.9rem; font-weight: 700; transition: background-color 0.3s ease; }
+.cta-button:hover { background-color: #cc5200; color: white; }
+.cta-button i { margin-right: 8px; }
+
+/* --- Hero Section --- */
+.hero-section { background: var(--section-background); padding: 60px 0 80px 0; }
+.hero-content { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.hero-text { flex-basis: 60%; }
+.hero-text h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+.hero-text h2 { font-family: var(--body-font); font-weight: 300; font-size: 1.5rem; color: var(--secondary-text); margin-bottom: 1.5rem; }
+.hero-text p { font-size: 1.1rem; color: var(--secondary-text); }
+.hero-image { flex-basis: 35%; max-width: 280px; }
+.hero-image img { width: 100%; border-radius: 50%; border: 5px solid white; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+
+/* --- Skills / Competencies Section --- */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.skill-category h4 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--primary-text); }
+.skill-category h4 i { color: var(--accent-color); margin-right: 10px; }
+.skill-category ul { list-style-type: none; padding-left: 0; }
+.skill-category li { margin-bottom: 0.5rem; position: relative; padding-left: 15px; color: var(--secondary-text); }
+.skill-category li::before { content: "›"; position: absolute; left: 0; color: var(--accent-color); font-weight: 700; }
+
+/* --- Projects Section --- */
+.projects-section { background-color: var(--background-color); }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.project-card { background: var(--section-background); border: 1px solid var(--border-color); border-radius: 8px; padding: 25px; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+.project-card h4 { font-size: 1.3rem; margin-bottom: 0.2rem; }
+.project-card .project-company { font-weight: 700; color: var(--secondary-text); font-size: 0.9rem; margin-bottom: 1rem; }
+.project-card .project-description { color: var(--secondary-text); margin-bottom: auto; }
+.tech-tags { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 8px; }
+.tech-tags span { background-color: #f0f0f0; padding: 4px 12px; border-radius: 15px; font-size: 0.85rem; color: var(--secondary-text); }
+
+/* --- Experience Timeline Section --- */
+.experience-section { background: var(--section-background); }
+.timeline { position: relative; max-width: 800px; margin: 0 auto; }
+.timeline::after { content: ''; position: absolute; width: 3px; background-color: var(--border-color); top: 10px; bottom: 10px; left: 15px; }
+.timeline-item { padding: 10px 40px; padding-left: 60px; position: relative; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before { content: ''; position: absolute; width: 16px; height: 16px; border-radius: 50%; background-color: white; border: 3px solid var(--accent-color); top: 18px; left: 8px; z-index: 1; }
+.timeline-content { padding: 10px 0; }
+.timeline-content h4 { margin-bottom: 0rem; font-size: 1.15rem; }
+.timeline-content h5, .timeline-content .date { font-family: var(--body-font); font-weight: 400; color: var(--secondary-text); }
+.timeline-content .date { font-size: 0.9rem; }
+
+/* --- Education Section --- */
+.education-section { background-color: var(--background-color); }
+.education-item { text-align: center; margin-bottom: 1.5rem; }
+.education-item h4 { margin-bottom: 0.2rem; }
+.education-item p { color: var(--secondary-text); }
+
+/* --- Footer --- */
+.main-footer { background: #2c3e50; color: #ecf0f1; text-align: center; padding: 3rem 0; }
+.main-footer p { margin-bottom: 1rem; max-width: 500px; margin-left: auto; margin-right: auto; color: #bdc3c7; }
+.cta-button-footer { display: inline-block; background-color: transparent; border: 2px solid var(--accent-color); color: var(--accent-color); padding: 10px 25px; border-radius: 5px; font-size: 1rem; font-weight: 700; transition: background-color 0.3s ease, color 0.3s ease; }
+.cta-button-footer:hover { background-color: var(--accent-color); color: white; }
+.cta-button-footer i { margin-right: 8px; }
+
+/* --- Responsive Design --- */
+@media(max-width: 850px) {
+    .skills-grid { grid-template-columns: 1fr; }
+}
+@media(max-width: 768px) {
+    .hero-content { flex-direction: column-reverse; text-align: center; gap: 20px; }
+    .hero-text h1 { font-size: 2.5rem; }
+    .hero-text h2 { font-size: 1.2rem; }
+    .timeline::after { left: 15px; }
+    .timeline-item { padding-left: 50px; }
+}
+@media(max-width: 480px) {
+    .main-header .container { flex-direction: column; gap: 10px; }
+    .hero-text h1 { font-size: 2rem; }
+    h3 { font-size: 1.8rem; }
+}
